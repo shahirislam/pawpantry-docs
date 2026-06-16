@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Templates — PawPantry Docs</title>
+  <meta name="description" content="Reference for all templates included in the PawPantry Shopify theme — store pages, customer account pages, and localisation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button class="nav-toggle" aria-label="Open menu">☰</button>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <a href="index.html" class="sb-logo">
+        <div class="sb-logo-paw">🐾</div>
+        <div class="sb-logo-text">
+          <span class="sb-logo-name">PawPantry</span>
+          <span class="sb-logo-sub">Theme Docs</span>
+        </div>
+      </a>
+    </div>
+    <div class="sb-search">
+      <input type="search" placeholder="Search docs…" aria-label="Search documentation" />
+    </div>
+    <nav aria-label="Docs navigation">
+      <div class="nav-label">Getting started</div>
+      <a href="index.html"><span class="nav-icon">🏠</span> Overview</a>
+      <a href="index.html#installation"><span class="nav-icon">🚀</span> Installation</a>
+      <a href="index.html#requirements"><span class="nav-icon">✅</span> Requirements</a>
+      <a href="index.html#colors"><span class="nav-icon">🎨</span> Brand colours</a>
+      <div class="nav-label">Reference</div>
+      <a href="customization.html"><span class="nav-icon">⚙️</span> Theme settings</a>
+      <a href="sections.html"><span class="nav-icon">🧩</span> Sections</a>
+      <a href="templates.html" aria-current="page"><span class="nav-icon">📄</span> Templates</a>
+      <div class="nav-label">Support</div>
+      <a href="index.html#faq"><span class="nav-icon">💬</span> FAQ</a>
+      <a href="index.html#support"><span class="nav-icon">📬</span> Contact support</a>
+    </nav>
+    <div class="sb-footer">
+      <span class="sb-footer-version">v1.0.0</span>
+      <a href="https://github.com/shahirislam/dog-food" class="sb-footer-link" target="_blank">GitHub →</a>
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+    <div class="content-inner">
+      <article class="article">
+
+        <div class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Docs</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Templates</span>
+          </div>
+          <div class="page-tag">📄 Reference</div>
+          <h1>Templates</h1>
+          <p class="page-subtitle">PawPantry uses Shopify's Online Store 2.0 JSON template format. Each template maps a URL route to an ordered set of sections.</p>
+        </div>
+
+        <p>Templates live in <code>templates/</code>. JSON templates (<code>.json</code>) define which sections are rendered and in what order. Liquid templates (<code>.liquid</code>) are used for pages that need tightly coupled logic.</p>
+
+        <div class="callout callout-info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body">
+            <strong>Alternate templates</strong>
+            <p>You can create alternate templates for any type directly in Shopify admin (e.g. <code>product.no-sidebar.json</code>) and assign them to individual products or collections.</p>
+          </div>
+        </div>
+
+        <!-- Store templates -->
+        <h2 id="store-templates">Store templates</h2>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Route</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>index.json</code></td>
+                <td><span class="route-badge">/</span></td>
+                <td>Homepage. Contains hero, benefits bar, featured products, categories grid, and testimonials. All sections can be reordered or hidden in the editor.</td>
+              </tr>
+              <tr>
+                <td><code>product.json</code></td>
+                <td><span class="route-badge">/products/*</span></td>
+                <td>Individual product page. Renders <code>main-product</code> with gallery, variant picker, and reviews.</td>
+              </tr>
+              <tr>
+                <td><code>collection.json</code></td>
+                <td><span class="route-badge">/collections/*</span></td>
+                <td>Collection listing page. Renders <code>main-collection</code> with filters, sorting, and a product grid.</td>
+              </tr>
+              <tr>
+                <td><code>cart.json</code></td>
+                <td><span class="route-badge">/cart</span></td>
+                <td>Shopping cart page. Renders <code>main-cart</code> with line items, delivery progress bar, and checkout.</td>
+              </tr>
+              <tr>
+                <td><code>search.json</code></td>
+                <td><span class="route-badge">/search</span></td>
+                <td>Search results. Renders <code>main-search</code> showing matched products, pages, and articles.</td>
+              </tr>
+              <tr>
+                <td><code>page.liquid</code></td>
+                <td><span class="route-badge">/pages/*</span></td>
+                <td>Generic page template. Renders the title and rich-text body content set in the Shopify admin.</td>
+              </tr>
+              <tr>
+                <td><code>page.contact.json</code></td>
+                <td><span class="route-badge">/pages/contact</span></td>
+                <td>Contact page. Renders <code>main-contact</code>. Assign this template to your contact page in the Shopify admin.</td>
+              </tr>
+              <tr>
+                <td><code>404.liquid</code></td>
+                <td><span class="route-badge">404 routes</span></td>
+                <td>Not-found page with a friendly message and a link back to the shop.</td>
+              </tr>
+              <tr>
+                <td><code>gift_card.liquid</code></td>
+                <td><span class="route-badge">/gift_cards/*</span></td>
+                <td>Gift card redemption page displaying the card code and balance.</td>
+              </tr>
+              <tr>
+                <td><code>password.liquid</code></td>
+                <td><span class="route-badge">/password</span></td>
+                <td>Password-protected store page shown when the store is not yet open to the public.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Customer account templates -->
+        <h2 id="customer-templates">Customer account templates</h2>
+        <p>All customer account pages live in <code>templates/customers/</code>. They share the same header and footer as the rest of the store.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Route</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>login.liquid</code></td>
+                <td><span class="route-badge">/account/login</span></td>
+                <td>Customer login form with email and password. Includes "Forgot password?" and a registration prompt.</td>
+              </tr>
+              <tr>
+                <td><code>register.liquid</code></td>
+                <td><span class="route-badge">/account/register</span></td>
+                <td>New customer registration with first name, last name, email, and password.</td>
+              </tr>
+              <tr>
+                <td><code>account.liquid</code></td>
+                <td><span class="route-badge">/account</span></td>
+                <td>Account dashboard showing recent orders and links to addresses and order history.</td>
+              </tr>
+              <tr>
+                <td><code>order.liquid</code></td>
+                <td><span class="route-badge">/account/orders/*</span></td>
+                <td>Individual order detail with line items, shipping address, payment method, and order status.</td>
+              </tr>
+              <tr>
+                <td><code>addresses.liquid</code></td>
+                <td><span class="route-badge">/account/addresses</span></td>
+                <td>Address book where customers can add, edit, or remove saved delivery addresses.</td>
+              </tr>
+              <tr>
+                <td><code>activate_account.liquid</code></td>
+                <td><span class="route-badge">/account/activate</span></td>
+                <td>Account activation page shown when a customer is invited by the store owner.</td>
+              </tr>
+              <tr>
+                <td><code>reset_password.liquid</code></td>
+                <td><span class="route-badge">/account/reset</span></td>
+                <td>Password reset form shown after a customer follows the "Forgot password?" email link.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Layout -->
+        <h2 id="layout">Layout</h2>
+        <p><code>layout/theme.liquid</code> is the master wrapper for every page. It outputs the <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags, loads <code>assets/theme.css</code> and <code>assets/theme.js</code>, and renders the header, announcement bar, main content block, and footer.</p>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <strong>Edit theme.liquid with care</strong>
+            <p>Changes to <code>layout/theme.liquid</code> affect every page. An unclosed tag or malformed Liquid expression can break the entire storefront.</p>
+          </div>
+        </div>
+
+        <!-- Localisation -->
+        <h2 id="locales">Localisation</h2>
+        <p>All user-facing strings are defined in <code>locales/en.default.json</code> — navigation labels, cart copy, product page text, form labels, and accessibility strings. To customise a string without editing source code, edit the locale file directly. To add a new language, duplicate the file and translate the values (keys must remain unchanged).</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Key group</th>
+                <th>Covers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><code>general</code></td><td>Password page meta text</td></tr>
+              <tr><td><code>navigation</code></td><td>Menu labels: Home, Shop, Contact, Account, Wishlist, Cart</td></tr>
+              <tr><td><code>cart</code></td><td>Cart empty state, delivery progress, totals, checkout button</td></tr>
+              <tr><td><code>product</code></td><td>Add to basket, Sold out, star ratings, tabs (Ingredients, Nutrition, Reviews), wishlist</td></tr>
+              <tr><td><code>collection</code></td><td>Sort and filter labels, category names, dog age filters, price bands</td></tr>
+              <tr><td><code>contact</code></td><td>Form labels, submit button, success message</td></tr>
+              <tr><td><code>customer</code></td><td>Login, register, account dashboard, order history, address book</td></tr>
+              <tr><td><code>newsletter</code></td><td>Newsletter signup copy</td></tr>
+              <tr><td><code>accessibility</code></td><td>ARIA labels for menu toggles, carousels, and skip links</td></tr>
+              <tr><td><code>404</code></td><td>Not-found page copy</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list"></ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="docs.js"></script>
+</body>
+</html>

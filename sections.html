@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sections — PawPantry Docs</title>
+  <meta name="description" content="Reference for all 13 sections included in the PawPantry Shopify theme." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button class="nav-toggle" aria-label="Open menu">☰</button>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <a href="index.html" class="sb-logo">
+        <div class="sb-logo-paw">🐾</div>
+        <div class="sb-logo-text">
+          <span class="sb-logo-name">PawPantry</span>
+          <span class="sb-logo-sub">Theme Docs</span>
+        </div>
+      </a>
+    </div>
+    <div class="sb-search">
+      <input type="search" placeholder="Search docs…" aria-label="Search documentation" />
+    </div>
+    <nav aria-label="Docs navigation">
+      <div class="nav-label">Getting started</div>
+      <a href="index.html"><span class="nav-icon">🏠</span> Overview</a>
+      <a href="index.html#installation"><span class="nav-icon">🚀</span> Installation</a>
+      <a href="index.html#requirements"><span class="nav-icon">✅</span> Requirements</a>
+      <a href="index.html#colors"><span class="nav-icon">🎨</span> Brand colours</a>
+      <div class="nav-label">Reference</div>
+      <a href="customization.html"><span class="nav-icon">⚙️</span> Theme settings</a>
+      <a href="sections.html" aria-current="page"><span class="nav-icon">🧩</span> Sections</a>
+      <a href="templates.html"><span class="nav-icon">📄</span> Templates</a>
+      <div class="nav-label">Support</div>
+      <a href="index.html#faq"><span class="nav-icon">💬</span> FAQ</a>
+      <a href="index.html#support"><span class="nav-icon">📬</span> Contact support</a>
+    </nav>
+    <div class="sb-footer">
+      <span class="sb-footer-version">v1.0.0</span>
+      <a href="https://github.com/shahirislam/dog-food" class="sb-footer-link" target="_blank">GitHub →</a>
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+    <div class="content-inner">
+      <article class="article">
+
+        <div class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Docs</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Sections</span>
+          </div>
+          <div class="page-tag">🧩 Reference</div>
+          <h1>Sections</h1>
+          <p class="page-subtitle">PawPantry ships with 13 sections — 3 global and 10 page-specific. All are managed via <strong>Online Store → Themes → Customise</strong>.</p>
+        </div>
+
+        <div class="callout callout-info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body">
+            <p><strong>Global sections</strong> (header, footer, announcement bar) appear on every page and are configured in <a href="customization.html">Theme settings</a>. <strong>Page sections</strong> are tied to specific templates and can be reordered or hidden per page in the editor.</p>
+          </div>
+        </div>
+
+        <!-- Global -->
+        <h2 id="global">Global sections</h2>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-global">Global</span>
+            <div>
+              <h3>Header <code>header.liquid</code></h3>
+            </div>
+          </div>
+          <p>The site-wide navigation bar rendered on every page. Includes the logo, main navigation menu, search, wishlist, account, and cart icon with item count.</p>
+          <ul>
+            <li>Supports text and image logos (configured in <a href="customization.html#header">Header settings</a>).</li>
+            <li>Optional sticky scroll behaviour.</li>
+            <li>On mobile, navigation collapses into a full-screen drawer.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-global">Global</span>
+            <div>
+              <h3>Footer <code>footer.liquid</code></h3>
+            </div>
+          </div>
+          <p>Site-wide footer with brand copy, contact information, navigation links, and social media icons. All content is controlled via <a href="customization.html#footer">Footer settings</a> — no code required.</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-global">Global</span>
+            <div>
+              <h3>Announcement bar <code>announcement-bar.liquid</code></h3>
+            </div>
+          </div>
+          <p>A slim, dismissible banner above the header. Supports plain text with an optional clickable link. Controlled via <a href="customization.html#announcement">Announcement bar settings</a>.</p>
+        </div>
+
+        <!-- Homepage -->
+        <h2 id="homepage">Homepage sections</h2>
+        <p>These sections are available on the homepage (<code>templates/index.json</code>). They can be reordered by dragging in the theme editor, and hidden individually by toggling the eye icon.</p>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-homepage">Homepage</span>
+            <div><h3>Hero <code>hero.liquid</code></h3></div>
+          </div>
+          <p>A full-width banner at the top of the homepage. Displays a headline, subheading, and call-to-action button over a background image.</p>
+          <ul>
+            <li><strong>Recommended image size:</strong> 1440 × 700 px or larger.</li>
+            <li>Use high-contrast imagery so overlaid text remains readable.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-homepage">Homepage</span>
+            <div><h3>Benefits bar <code>benefits-bar.liquid</code></h3></div>
+          </div>
+          <p>A horizontal strip of 3–4 trust signals below the hero — for example "Free UK delivery over £40", "Vet-approved recipes", "No nasty additives". Each benefit shows an icon and short label.</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-homepage">Homepage</span>
+            <div><h3>Featured products <code>featured-products.liquid</code></h3></div>
+          </div>
+          <p>A curated product grid (typically 4–8 products) using the <code>product-card</code> snippet for consistent layout. Editors choose which collection or individual products to feature.</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-homepage">Homepage</span>
+            <div><h3>Categories grid <code>categories-grid.liquid</code></h3></div>
+          </div>
+          <p>A visual grid linking to product collections — Dry food, Wet food, Treats, Supplements, etc. Each cell shows a collection image and name.</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-homepage">Homepage</span>
+            <div><h3>Testimonials <code>testimonials.liquid</code></h3></div>
+          </div>
+          <p>A carousel or grid of customer review quotes with star ratings, reviewer name, and optional product link. Content is managed directly in the section editor — no third-party review app required.</p>
+        </div>
+
+        <!-- Page sections -->
+        <h2 id="page-sections">Page-specific sections</h2>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-page">Product</span>
+            <div><h3>Product page <code>main-product.liquid</code></h3></div>
+          </div>
+          <p>The core product display section. Rendered on every product page.</p>
+          <ul>
+            <li>Product image gallery with zoom on hover</li>
+            <li>Title, price, and compare-at price</li>
+            <li>Variant selector (size, flavour, etc.)</li>
+            <li>Quantity picker and Add to basket button</li>
+            <li>Wishlist toggle</li>
+            <li>Accordion tabs: Description, Ingredients, Nutritional info</li>
+            <li>Customer review section with star rating summary</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-page">Collection</span>
+            <div><h3>Collection page <code>main-collection.liquid</code></h3></div>
+          </div>
+          <p>The product listing page. Rendered on all collection pages.</p>
+          <ul>
+            <li>Sort-by dropdown: Featured, Price low–high, Price high–low, Newest, Best selling</li>
+            <li>Filter sidebar: Category, Dog age, Price range</li>
+            <li>Responsive product grid using the <code>product-card</code> snippet</li>
+            <li>Pagination via the <code>pagination</code> snippet</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-page">Cart</span>
+            <div><h3>Cart page <code>main-cart.liquid</code></h3></div>
+          </div>
+          <ul>
+            <li>Line item list with image, name, variant, quantity picker, and remove button</li>
+            <li>Free delivery progress bar (driven by <a href="customization.html#cart">Cart settings</a>)</li>
+            <li>Order summary with subtotal and delivery charge</li>
+            <li>Proceed to checkout button</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-page">Contact</span>
+            <div><h3>Contact page <code>main-contact.liquid</code></h3></div>
+          </div>
+          <p>A contact form with name, email, and message fields. Submissions are routed through Shopify's native contact form handler. A success message is shown after submission without a page reload.</p>
+        </div>
+
+        <div class="section-card">
+          <div class="section-card-head">
+            <span class="section-tag tag-page">Search</span>
+            <div><h3>Search results <code>main-search.liquid</code></h3></div>
+          </div>
+          <p>Displays results for products, pages, and articles. Shows the query, result count, and a grid of matched products using the <code>product-card</code> snippet.</p>
+        </div>
+
+        <!-- Snippets -->
+        <h2 id="snippets">Snippets</h2>
+        <p>Reusable template partials included by sections. They can't be added directly to a page, but their output appears wherever the parent section is used.</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Purpose</th>
+                <th>Used by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>product-card.liquid</code></td>
+                <td>Renders a single product card with image, title, price, quick-add, and wishlist icon</td>
+                <td>featured-products, main-collection, main-search</td>
+              </tr>
+              <tr>
+                <td><code>pagination.liquid</code></td>
+                <td>Renders numbered pagination controls</td>
+                <td>main-collection, main-search</td>
+              </tr>
+              <tr>
+                <td><code>breadcrumb.liquid</code></td>
+                <td>Renders a breadcrumb trail: Home › Collection › Product</td>
+                <td>main-product, main-collection</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list"></ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theme settings — PawPantry Docs</title>
+  <meta name="description" content="Full reference for all PawPantry theme settings — colours, fonts, header, announcement bar, footer and cart." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button class="nav-toggle" aria-label="Open menu">☰</button>
+
+<div class="shell">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <a href="index.html" class="sb-logo">
+        <div class="sb-logo-paw">🐾</div>
+        <div class="sb-logo-text">
+          <span class="sb-logo-name">PawPantry</span>
+          <span class="sb-logo-sub">Theme Docs</span>
+        </div>
+      </a>
+    </div>
+    <div class="sb-search">
+      <input type="search" placeholder="Search docs…" aria-label="Search documentation" />
+    </div>
+    <nav aria-label="Docs navigation">
+      <div class="nav-label">Getting started</div>
+      <a href="index.html"><span class="nav-icon">🏠</span> Overview</a>
+      <a href="index.html#installation"><span class="nav-icon">🚀</span> Installation</a>
+      <a href="index.html#requirements"><span class="nav-icon">✅</span> Requirements</a>
+      <a href="index.html#colors"><span class="nav-icon">🎨</span> Brand colours</a>
+      <div class="nav-label">Reference</div>
+      <a href="customization.html" aria-current="page"><span class="nav-icon">⚙️</span> Theme settings</a>
+      <a href="sections.html"><span class="nav-icon">🧩</span> Sections</a>
+      <a href="templates.html"><span class="nav-icon">📄</span> Templates</a>
+      <div class="nav-label">Support</div>
+      <a href="index.html#faq"><span class="nav-icon">💬</span> FAQ</a>
+      <a href="index.html#support"><span class="nav-icon">📬</span> Contact support</a>
+    </nav>
+    <div class="sb-footer">
+      <span class="sb-footer-version">v1.0.0</span>
+      <a href="https://github.com/shahirislam/dog-food" class="sb-footer-link" target="_blank">GitHub →</a>
+    </div>
+  </aside>
+
+  <div class="content-wrap">
+    <div class="content-inner">
+      <article class="article">
+
+        <div class="page-header">
+          <div class="breadcrumb">
+            <a href="index.html">Docs</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Theme settings</span>
+          </div>
+          <div class="page-tag">⚙️ Reference</div>
+          <h1>Theme settings</h1>
+          <p class="page-subtitle">All global settings available under <strong>Online Store → Themes → Customise → Theme settings</strong>. Changes apply store-wide.</p>
+        </div>
+
+        <div class="callout callout-info">
+          <span class="callout-icon">ℹ️</span>
+          <div class="callout-body">
+            <p>Changes to theme settings take effect immediately in the preview and are saved when you click <strong>Save</strong> in the theme editor.</p>
+          </div>
+        </div>
+
+        <!-- Colours -->
+        <h2 id="colors">Colours</h2>
+        <p>Five brand colours control the entire visual identity. All are standard hex colour pickers in the theme editor.</p>
+
+        <div class="swatch-row">
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#FF6B6B;"></div>
+            <span>Coral</span><span>#FF6B6B</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#FFD93D;"></div>
+            <span>Yellow</span><span>#FFD93D</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#1A1A2E;"></div>
+            <span>Navy</span><span>#1A1A2E</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#6BCB77;"></div>
+            <span>Mint</span><span>#6BCB77</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-circle" style="background:#F8F7FF; border:1.5px solid #e2e2ef;"></div>
+            <span>Lavender</span><span>#F8F7FF</span>
+          </div>
+        </div>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">🎨</span>
+            <span class="setting-group-title">Colours — 5 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">color_coral</div>
+              <div class="setting-label">Coral (accent)</div>
+              <div class="setting-default">#FF6B6B</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Primary buttons, links, active nav states, price highlights.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">color_yellow</div>
+              <div class="setting-label">Yellow (highlight)</div>
+              <div class="setting-default">#FFD93D</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Star ratings, sale badges, secondary highlights.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">color_navy</div>
+              <div class="setting-label">Navy (primary)</div>
+              <div class="setting-default">#1A1A2E</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Header background, headings, footer background.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">color_mint</div>
+              <div class="setting-label">Mint (secondary)</div>
+              <div class="setting-default">#6BCB77</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Benefit icons, delivery success indicator, tags.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">color_lavender</div>
+              <div class="setting-label">Lavender (background)</div>
+              <div class="setting-default">#F8F7FF</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Page background, alternating section bands.</div>
+          </div>
+        </div>
+
+        <div class="callout callout-tip">
+          <span class="callout-icon">♿</span>
+          <div class="callout-body">
+            <strong>Accessibility tip</strong>
+            <p>When customising <code>color_coral</code>, ensure at least a 4.5:1 contrast ratio against white text (WCAG AA). Tools like <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">WebAIM Contrast Checker</a> can help.</p>
+          </div>
+        </div>
+
+        <!-- Typography -->
+        <h2 id="typography">Typography</h2>
+        <p>Choose from curated font pairings. All fonts are loaded from Google Fonts, subset to Latin characters for performance.</p>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">🔤</span>
+            <span class="setting-group-title">Typography — 2 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">font_heading</div>
+              <div class="setting-label">Heading font</div>
+              <div class="setting-default">Fredoka</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Options: <strong>Fredoka</strong> (recommended) · Poppins · Nunito</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">font_body</div>
+              <div class="setting-label">Body font</div>
+              <div class="setting-default">Outfit</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Options: <strong>Outfit</strong> (recommended) · Inter · DM Sans</div>
+          </div>
+        </div>
+
+        <h3>Font pairing guide</h3>
+        <ul>
+          <li><strong>Fredoka + Outfit</strong> — default; playful and modern, ideal for pet brands.</li>
+          <li><strong>Poppins + Inter</strong> — clean and geometric; suits a more premium or clinical feel.</li>
+          <li><strong>Nunito + DM Sans</strong> — rounded and friendly; great for family-oriented brands.</li>
+        </ul>
+
+        <!-- Header -->
+        <h2 id="header">Header</h2>
+        <p>Controls the site-wide navigation bar, logo, and scroll behaviour.</p>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">🏷️</span>
+            <span class="setting-group-title">Header — 4 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">favicon</div>
+              <div class="setting-label">Favicon</div>
+              <div class="setting-default">—</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Recommended: 32×32 px PNG. Shown in browser tabs and bookmarks.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">logo_text</div>
+              <div class="setting-label">Logo text</div>
+              <div class="setting-default">PawPantry</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Shown when no logo image is uploaded.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">logo</div>
+              <div class="setting-label">Logo image</div>
+              <div class="setting-default">—</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Overrides logo text when set. Recommended: transparent PNG, max 240 px wide at 2× resolution.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">sticky_header</div>
+              <div class="setting-label">Sticky header</div>
+              <div class="setting-default">Enabled</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Keeps the header fixed at the top as the user scrolls.</div>
+          </div>
+        </div>
+
+        <!-- Announcement bar -->
+        <h2 id="announcement">Announcement bar</h2>
+        <p>A dismissible banner above the header. Ideal for promotions, delivery notices, and seasonal messages.</p>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">📢</span>
+            <span class="setting-group-title">Announcement bar — 3 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">show_announcement</div>
+              <div class="setting-label">Show bar</div>
+              <div class="setting-default">Enabled</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Toggle the announcement bar on or off across the entire store.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">announcement_text</div>
+              <div class="setting-label">Announcement text</div>
+              <div class="setting-default">🐾 Free UK mainland delivery on orders over £40…</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Keep under 80 characters to avoid wrapping on mobile. Emojis are supported.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">announcement_link</div>
+              <div class="setting-label">Announcement link</div>
+              <div class="setting-default">—</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Makes the full banner clickable. Leave blank for a static, non-linked banner.</div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <h2 id="footer">Footer</h2>
+        <p>Controls footer content: brand copy, contact details, and social media links.</p>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">🦶</span>
+            <span class="setting-group-title">Footer — 7 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">footer_tagline</div>
+              <div class="setting-label">Tagline</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Brand strapline shown below the logo in the footer.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">footer_address</div>
+              <div class="setting-label">Address</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Use <code>/</code> as a line-break separator: <code>Line 1 / Line 2 / Line 3</code>.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">footer_phone</div>
+              <div class="setting-label">Phone</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Displayed as plain text in the footer contact block.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">footer_email</div>
+              <div class="setting-label">Email</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Displayed as a <code>mailto:</code> link in the footer.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">social_facebook</div>
+              <div class="setting-label">Facebook URL</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Full profile URL. Leave blank to hide the Facebook icon.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">social_instagram</div>
+              <div class="setting-label">Instagram URL</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Full profile URL. Leave blank to hide the Instagram icon.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">social_twitter</div>
+              <div class="setting-label">Twitter / X URL</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Full profile URL. Leave blank to hide the Twitter / X icon.</div>
+          </div>
+        </div>
+
+        <!-- Cart -->
+        <h2 id="cart">Cart</h2>
+        <p>Controls the free delivery progress bar and delivery charge shown in the cart.</p>
+
+        <div class="setting-group">
+          <div class="setting-group-header">
+            <span class="setting-group-icon">🛒</span>
+            <span class="setting-group-title">Cart — 2 settings</span>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">free_delivery_threshold</div>
+              <div class="setting-label">Free delivery threshold</div>
+              <div class="setting-default">40</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Enter in your store's base currency units (e.g. <code>40</code> = £40). The cart shows a progress bar toward this value.</div>
+          </div>
+          <div class="setting-row">
+            <div>
+              <div class="setting-id">standard_delivery_charge</div>
+              <div class="setting-label">Standard delivery charge</div>
+              <div class="setting-default">395</div>
+            </div>
+            <div></div>
+            <div class="setting-desc">Enter in <strong>the smallest currency unit</strong> (pence / cents). <code>395</code> = £3.95. Shown when the free threshold hasn't been reached.</div>
+          </div>
+        </div>
+
+        <div class="callout callout-warn">
+          <span class="callout-icon">⚠️</span>
+          <div class="callout-body">
+            <strong>These settings control display only</strong>
+            <p>You must also set up matching shipping rates in <strong>Shopify Admin → Settings → Shipping and delivery</strong> for orders to actually qualify for free shipping.</p>
+          </div>
+        </div>
+
+        <h3>Example values by currency</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Currency</th>
+                <th>free_delivery_threshold</th>
+                <th>standard_delivery_charge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GBP — £40 free, £3.95 standard</td>
+                <td><code>40</code></td>
+                <td><code>395</code></td>
+              </tr>
+              <tr>
+                <td>EUR — €50 free, €4.99 standard</td>
+                <td><code>50</code></td>
+                <td><code>499</code></td>
+              </tr>
+              <tr>
+                <td>USD — $60 free, $5.99 standard</td>
+                <td><code>60</code></td>
+                <td><code>599</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </article>
+
+      <aside class="toc" aria-label="On this page">
+        <div class="toc-title">On this page</div>
+        <ul class="toc-list"></ul>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="docs.js"></script>
+</body>
+</html>
